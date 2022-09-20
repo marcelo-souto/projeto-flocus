@@ -1,0 +1,38 @@
+.diferencial {
+  margin-top: -200px;
+}
+
+.diferencial h2 {
+  max-width: 20ch;
+}
+
+.diferencial > p {
+  max-width: 60ch;
+  color: #656565;
+  margin-bottom: 60px;
+}
+
+.diferencial-conteudo img {
+  display: block;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+}
+
+.diferencial-lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 40px 60px 60px 60px;
+  border-radius: 0 0 8px 8px;
+  gap: 32px 60px;
+  background-color: #FAFAFA;
+}
+
+.diferencial-lista h3 {
+  font: 500 1.5rem/1.5 "Satoshi", sans-serif;
+  margin-bottom: 8px;
+}
+
+.diferencial-lista p {
+  font: 500 1rem/1.5 "Roboto", sans-serif;
+  color: #656565;
+}

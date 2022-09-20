@@ -1,0 +1,11 @@
+.produtos-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 460px; */
+  gap: 40px;
+  grid-area: produto;
+}
+
+/* .produto-item{
+  
+} */

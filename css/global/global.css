@@ -6,6 +6,10 @@ body, ul, h1, h2, h3, h4, p {
 
 body {
   font-family: "Roboto", sans-serif;
+  background: url('../../images/granulados-background.svg'), 
+                    linear-gradient(180deg, #FC698E 0.01%, #FB90AB 33.54%, #FECDD9 63.89%, rgba(255, 255, 255, 0) 100%);
+  background-size: auto 1160px;
+  background-repeat: repeat-x;
 }
 
 a {
@@ -18,4 +22,20 @@ a {
   padding-left: 20px;
   max-width: 1160px;
   margin: 0 auto;
+}
+
+/* CLASSES DE FONTES REUTILIZAVEIS */
+.fonte-display-xxl {
+  font: 600 4.5rem/1.2 "Sansita Swashed";
+  margin-bottom: 32px;
+}
+
+.fonte-display-xl {
+  font: 600 4rem/1.2 "Sansita Swashed";
+  margin-bottom: 32px;
+}
+
+.fonte-corpo-texto {
+  font-size: 1.5rem;
+  line-height: 1.5;
 }

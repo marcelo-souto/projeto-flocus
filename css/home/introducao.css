@@ -1,25 +1,34 @@
 .introducao {
   padding-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:'texto texto imagem'
+                      'produto produto imagem'
+                      '....... ....... imagem';
+  row-gap: 48px
 }
 
 .introducao h1 {
-  font: 600 4.5rem/1.2 "Sansita Swashed";
   color: #1B1517;
-  max-width: 20ch;
-  margin-bottom: 24px; 
+  max-width: 20ch; 
 }
 
 .introducao p {
-  font-size: 1.5rem;
-  line-height: 1.5;
   color: #4B2E35;
 }
 
-.produtos-area {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-  margin-top: 48px;
+.introducao-texto {
+  grid-area: texto;
+}
+
+.imagem-sorvetes-background {
+  grid-area: imagem;
+  margin-top: -40px;
+  margin-right: -120px;
+}
+
+.imagem-sorvetes-background img {
+  width: 100%;
 }
 
 .produtos-area img {
