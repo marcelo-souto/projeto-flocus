@@ -29,7 +29,7 @@
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  padding: 32px;
+  padding: 32px 40px;
 }
 
 .opiniao p::before {
@@ -56,10 +56,9 @@
 }
 
 .opiniao p {
-  font: italic 500 1.25rem/1.5 "Satoshi", sans-serif;
+  font: italic 900 1.25rem/1.5 "Merriweather", serif;
   color: #4B2E35;
   
-  max-width: 15ch;
   position: relative;
 }
 
@@ -67,6 +66,6 @@
   font: 500 1rem/1.5 "Roboto", sans-serif;
   display: block;
   margin-top: 12px;
-  color: #4b2e3599;
+  color: #4b2e35c8;
   align-self: start;
 }

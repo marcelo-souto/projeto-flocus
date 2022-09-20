@@ -1,6 +1,7 @@
 .introducao {
   padding-top: 80px;
   display: grid;
+  column-gap: 40px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:'texto texto imagem'
                       'produto produto imagem'
@@ -15,6 +16,11 @@
 
 .introducao p {
   color: #4B2E35;
+}
+
+.introducao span {
+  display: block;
+  font-weight: 600;
 }
 
 .introducao-texto {

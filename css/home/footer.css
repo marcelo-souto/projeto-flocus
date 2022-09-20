@@ -1,0 +1,48 @@
+.footer-bg {
+  background-color: #f8f8f8;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 60px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.footer-contato h2,
+.footer-links h2 {
+  font: 700 1.5rem/1.5 "Satoshi", sans-serif;
+  text-transform: uppercase;
+  color: #1F1F1F;
+  letter-spacing: 0.08rem;
+  margin-bottom: 24px;
+}
+
+.footer a, .footer address {
+  font-size: 1.125rem;
+  color: #656565;
+  font-style: normal;
+}
+
+.footer address {
+  margin-top: 36px;
+  margin-bottom: 48px;
+}
+
+.footer-contato li,
+.footer-contato address p,
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-copy {
+  grid-column: 1 / -1;
+  color: #808080;
+}
+

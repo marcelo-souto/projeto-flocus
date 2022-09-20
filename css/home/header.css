@@ -14,11 +14,16 @@
 
 .header-menu a {
   color: #1B1517;
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 .header-menu-user {
   display: flex;
   gap: 20px;
   align-items: center;
+}
+
+.header-menu-user img {
+  width: 24px;
+  height: 24px;
 }
