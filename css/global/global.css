@@ -1,0 +1,21 @@
+body, ul, h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* CLASSES REUTILIZAVEIS */
+.container {
+  padding-right: 20px;
+  padding-left: 20px;
+  max-width: 1160px;
+  margin: 0 auto;
+}

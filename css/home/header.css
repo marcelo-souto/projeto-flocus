@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px; 
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-menu a {
+  color: #1B1517;
+  font-size: 1rem;
+}
+
+.header-menu-user {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}

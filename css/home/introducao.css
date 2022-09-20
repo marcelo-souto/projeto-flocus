@@ -1,0 +1,27 @@
+.introducao {
+  padding-top: 80px;
+}
+
+.introducao h1 {
+  font: 600 4.5rem/1.2 "Sansita Swashed";
+  color: #1B1517;
+  max-width: 20ch;
+  margin-bottom: 24px; 
+}
+
+.introducao p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #4B2E35;
+}
+
+.produtos-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-top: 48px;
+}
+
+.produtos-area img {
+  width: 100%;
+}
