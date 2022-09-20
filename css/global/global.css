@@ -2,6 +2,7 @@ body, ul, h1, h2, h3, h4, p {
   padding: 0;
   margin: 0;
   list-style: none;
+  box-sizing: border-box;
 }
 
 body {

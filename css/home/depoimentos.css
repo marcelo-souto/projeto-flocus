@@ -1,0 +1,72 @@
+.depoimentos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 100px;
+}
+
+.opiniao-cliente {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.depoimentos div:first-child {
+  border-radius: 8px 0 0 8px;
+  overflow: hidden;
+}
+
+.depoimentos div:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.opiniao-cliente img {
+  width: 100%;
+  display: block;
+}
+
+.opiniao {
+  background-color: #FEDEE6;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding: 32px;
+}
+
+.opiniao p::before {
+  content: '';
+  width: 28px;
+  height: 20px;
+  display: block;
+  background-image: url("../../images/icones/icone-aspas-inicial.svg");
+  position: absolute;
+  left: -32px;
+  top: -10px;
+}
+
+.opiniao p::after {
+  content: '';
+  width: 28px;
+  height: 20px;
+  display: block;
+  background-image: url("../../images/icones/icone-aspas-final.svg");
+  position: absolute;
+  bottom: 32px;
+  right: -32px;
+  
+}
+
+.opiniao p {
+  font: italic 500 1.25rem/1.5 "Satoshi", sans-serif;
+  color: #4B2E35;
+  
+  max-width: 15ch;
+  position: relative;
+}
+
+.opiniao span {
+  font: 500 1rem/1.5 "Roboto", sans-serif;
+  display: block;
+  margin-top: 12px;
+  color: #4b2e3599;
+  align-self: start;
+}

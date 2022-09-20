@@ -1,0 +1,12 @@
+.parceiros {
+  margin-bottom: 100px;
+}
+
+.parceiros-lista {
+  display: flex;
+  gap: 40px;
+}
+
+.parceiros-lista img {
+  width: 100%;
+}
