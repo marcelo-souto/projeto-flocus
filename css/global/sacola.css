@@ -153,5 +153,13 @@
 .botao-cancelar {
   position: absolute;
   right: 16px;
+  padding: 12px;
   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .mostrar {
+    width: 80% !important;
+  }
+ 
 }

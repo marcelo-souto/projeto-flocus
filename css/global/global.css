@@ -16,6 +16,11 @@ body {
 
 a {
   text-decoration: none;
+  transition: .3s;
+}
+
+a:hover {
+  color: #000000 !important;
 }
 
 .produto-item {

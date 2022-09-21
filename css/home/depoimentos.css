@@ -25,6 +25,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  object-position: left;
 }
 
 .opiniao {
