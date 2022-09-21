@@ -222,7 +222,10 @@ function inserirNaSacola() {
     
     document.querySelector('.sacola-container').style.display = 'block';
 
-    document.querySelector("aside").classList.add("mostrar");
+    let tamanhoDaTela = document.body.clientWidth;
+    if (tamanhoDaTela > 560) {
+      document.querySelector("aside").classList.add("mostrar");
+    }
 
     let subtotal = 0;
     let total = 0;

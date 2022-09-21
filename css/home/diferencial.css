@@ -63,20 +63,28 @@
   }
 }
 
-@media (max-width: 560px) {
-  .diferencial-lista {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 690px) {
   .diferencial {
     margin-top: 60px;
+  }
+  .diferencial h3 {
+    font-size: 1.10rem;
   }
   .diferencial > p {
     margin-bottom: 40px;
   }
   .diferencial {
     margin-bottom: 60px;
+  }
+}
+
+
+@media (max-width: 560px) {
+  .diferencial-lista {
+    grid-template-columns: 1fr;
+  }
+  .diferencial-lista li:nth-child(5),
+  .diferencial-lista li:nth-child(6) {
+    display: none;
   }
 }

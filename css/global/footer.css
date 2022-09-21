@@ -55,12 +55,21 @@
     grid-column: 1 / -1;
   }
   .footer h2 {
-    font-size: 1.25rem;
+    font-size: 1rem;
+  }
+  .footer a, address p {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 490px) {
   .footer {
     grid-template-columns: 1fr;
+  }
+  .footer-contato {
+    order: 1;
+  }
+  .footer-copy {
+    order: 2;
   }
 }
