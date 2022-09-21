@@ -11,10 +11,19 @@ body {
                     linear-gradient(180deg, #FC698E 0.01%, #FB90AB 33.54%, #FECDD9 63.89%, rgba(255, 255, 255, 0) 100%);
   background-size: auto 1160px;
   background-repeat: repeat-x;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
+}
+
+.produto-item {
+  cursor: pointer;
+}
+
+.modelo {
+  display: none;
 }
 
 /* CLASSES REUTILIZAVEIS */

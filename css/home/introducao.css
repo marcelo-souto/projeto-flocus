@@ -37,6 +37,14 @@
   width: 100%;
 }
 
-.produtos-area img {
-  width: 100%;
+.produtos-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 480px;
+}
+
+.produto-item {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
 }

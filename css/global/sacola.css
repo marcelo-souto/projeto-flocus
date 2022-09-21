@@ -1,0 +1,137 @@
+.sacola-wrapper a img {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 12px;
+}
+
+.sacola-wrapper {
+  overflow-x: hidden;
+  position: fixed;
+  right: -460px;
+
+  width: 340px; 
+  height: 100%;
+  background-color: #FFFFFF;
+  padding: 80px 40px 60px 40px;
+  box-shadow: 0px 4px 32px 8px rgba(0, 0, 0, 0.25);
+ 
+  transition: .3s;
+  z-index: 1;
+}
+
+.mostrar {
+  right: 0;
+}
+
+.sacola {
+  display: grid;
+  gap: 20px;
+  padding-bottom: 100px;
+}
+
+.sacola-wrapper h2 {
+  font: 700 1.5rem/1.5 "Satoshi", sans-serif;
+  margin-bottom: 20px;
+}
+
+.sacola-item {
+  padding: 16px;
+  border: 2px solid #F5F5F5;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  height: max-content;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+.sacola-info {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 16px;
+  row-gap: 12px;
+  
+}
+
+.sacola-display {
+  background-size: cover;
+  width: 90px;
+  height: 90px;
+  background-position: top center;
+  border-radius: 4px;
+  
+}
+
+.sacola-nome {
+  font: 500 1rem/1.5 "Satoshi", sans-serif;
+  margin-bottom: 6px;
+}
+
+.sacola-tamanho {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #808080;
+  margin-bottom: 6px;
+}
+
+.sacola-tamanho:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #F5F5F5;
+  display: block;
+  margin-top: 6px;
+}
+
+.sacola-adicionais {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: #808080;
+  display: grid;
+  gap: 4px;
+}
+
+.sacola-valor, .sacola-subtotal, .sacola-total {
+  font: 500 1rem/1.2 "Satoshi", sans-serif;
+}
+
+.sacola-excluir {
+  font-size: 0.875rem;
+  color: #808080;
+  margin: 0;
+  cursor: pointer;
+  align-self: end;
+}
+
+.sacola-container {
+  position: relative;
+}
+
+.total-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  color: #808080;
+  line-height: 1.2;
+  position: sticky;
+  bottom: 80px;
+  
+  background-color:#FFFFFF;
+  margin-left: -40px;
+  margin-right: -40px;
+  padding: 40px;
+
+}
+
+.sacola-subtotal, .sacola-total {
+  justify-self: end;
+  color: #000000;
+}
+
+
+.botao-cancelar {
+  position: absolute;
+  right: 16px;
+  cursor: pointer;
+}

@@ -1,6 +1,12 @@
 /* GLOBAL */
 @import "./css/global/global.css";
 
+/* MODAL */
+@import "./css/global/modal.css";
+
+/* SACOLA */
+@import "./css/global/sacola.css";
+
 /* PRODUTOS */
 @import "./css/produtos/produtos.css";
 

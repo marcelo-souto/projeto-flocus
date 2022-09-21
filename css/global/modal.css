@@ -1,0 +1,175 @@
+/* Modal */
+/* Fontes: Roboto Regular / Satoshi Medium e Bold*/
+
+.modal-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #1f1f1f80;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.modal {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  max-width: 1020px;
+  box-sizing: border-box;
+}
+
+.modal-display {
+  border-radius: 8px 0 0 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.modal-info {
+  padding: 60px;
+  background-color: #ffffff;
+  border-radius: 0 8px 8px 0;
+}
+
+.modal-info div + div {
+  margin-top: 16px;
+}
+
+.modal-info-section-titulo {
+  font: 500 1rem/1.5 "Roboto", sans-serif;
+  color: #2d2d2d;
+
+  margin-bottom: 12px;
+  display: block;
+}
+
+.modal-info-price {
+  font: 700 2rem/1.2 "Satoshi", sans-serif;
+  position: relative;
+}
+
+.modal-info-price::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  display: block;
+  background-color: #f5f5f5;
+  margin-top: 16px;
+}
+
+.modal-info-tamanhos {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-info-tamanhos li {
+  font: 500 1rem/1.2 "Satoshi", sans-serif;
+  color: #656565;
+
+  border: 2px solid #eeeeee;
+  border-radius: 4px;
+
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: 0.3s;
+}
+
+.active {
+  border-color: #656565 !important;
+}
+
+.modal-info-sabores {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  grid-column: 1 / -1;
+}
+
+.modal-info-sabores::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  display: block;
+  background-color: #f5f5f5;
+  margin-top: 16px;
+  position: absolute;
+  bottom: -20px;
+}
+
+.modal-info-sabores li {
+  width: 92px;
+  height: 90px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 2px #ffffff;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  background-size: 100%;
+  background-position: top;
+  transition: 0.3s;
+}
+
+.modal-info div:nth-child(3) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.modal-info .msg-obrigatorio {
+  grid-column: 2;
+  grid-row: 1;
+  font: 500 0.775rem "Satoshi", sans-serif;
+  align-self: start;
+  justify-self: end;
+  color: #ff0000;
+  opacity: 0;
+  cursor: default;
+  transition: 0.2s;
+  text-transform: uppercase;
+}
+
+.modal-info div:nth-child(4) {
+  margin-top: 40px;
+}
+
+.modal-info-adicionais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.modal-info-adicionais li {
+  font: 500 0.875rem/1 "Roboto", sans-serif;
+  color: #656565;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 2px solid #eeeeee;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao {
+  font: 500 1rem/1 "Satoshi", sans-serif;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: #fb87a4;
+  color: #1b1517;
+  border: none;
+  cursor: pointer;
+}
+
+.cancelar {
+  cursor: pointer;
+  font: 500 1rem/1 "Satoshi", sans-serif;
+  color: #2d2d2d;
+  align-self: center;
+}
+
+.modal-info div:last-child {
+  display: flex;
+  justify-content: space-between;
+}

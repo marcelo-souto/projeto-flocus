@@ -27,3 +27,25 @@
   width: 24px;
   height: 24px;
 }
+
+.sacola-icone {
+  position: relative;
+}
+
+.sacola-icone::before {
+  content: attr(data-content);
+  width: 16px;
+  height: 16px;
+  display: flex;
+  border-radius: 50%;
+  background-color: #FCCBD6;
+  color: #1B1517;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  position: absolute;
+  top: -6px;
+  right: -8px;
+}
