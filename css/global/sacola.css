@@ -157,6 +157,22 @@
   cursor: pointer;
 }
 
+.botao-finalizar {
+  margin-top: 20px;
+  grid-column: 2;
+  place-self: end;
+}
+
+.limpar-sacola {
+  color: #808080;
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  padding: 12px;
+  cursor: pointer;
+  display: none;
+}
+
 @media (max-width: 480px) {
   .mostrar {
     width: 80% !important;

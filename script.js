@@ -195,9 +195,14 @@ function pegarEscolhasCliente() {
 }
 
 document
-  .querySelector(".botao")
+  .querySelector(".botao-adicionar")
   .addEventListener("click", pegarEscolhasCliente);
 
+
+document.querySelector('.limpar-sacola').addEventListener('click', () => {
+  cart = [];
+  inserirNaSacola()
+})
 
 document.querySelector('.sacola-icone').addEventListener('click', (e) => {
   e.preventDefault()
@@ -217,6 +222,8 @@ function inserirNaSacola() {
   document.querySelector('.sacola-icone').dataset.content = `${cart.length}`
 
   if (cart.length > 0) {
+
+    document.querySelector('.limpar-sacola').style.display = 'block'
 
     document.querySelector('.mensagem-sacola-vazia').style.display = 'none';
     
@@ -282,6 +289,7 @@ function inserirNaSacola() {
       document.querySelector(".sacola").append(sacolaItem);
     }
   } else {
+    document.querySelector('.limpar-sacola').style.display = 'none'
     document.querySelector('.sacola-container').style.display = 'none';
     document.querySelector('.mensagem-sacola-vazia').style.display = 'grid';
     document.querySelector("aside").classList.remove("mostrar");
