@@ -15,7 +15,7 @@
   font: 700 1.5rem/1.5 "Satoshi", sans-serif;
   text-transform: uppercase;
   color: #1F1F1F;
-  letter-spacing: 0.08rem;
+  letter-spacing: 0.1rem;
   margin-bottom: 24px;
 }
 
@@ -46,3 +46,21 @@
   color: #808080;
 }
 
+@media (max-width: 780px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .footer img {
+    grid-column: 1 / -1;
+  }
+  .footer h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+}

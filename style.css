@@ -11,9 +11,9 @@
 @import "./css/produtos/produtos.css";
 
 /* HOME */
-@import "./css/home/header.css";
+@import "./css/global/header.css";
 @import "./css/home/introducao.css";
 @import "./css/home/diferencial.css";
 @import "./css/home/parceiros.css";
 @import "./css/home/depoimentos.css";
-@import "./css/home/footer.css"
+@import "./css/global/footer.css";

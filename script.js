@@ -217,6 +217,8 @@ function inserirNaSacola() {
   document.querySelector('.sacola-icone').dataset.content = `${cart.length}`
 
   if (cart.length > 0) {
+
+    document.querySelector('.mensagem-sacola-vazia').style.display = 'none';
     
     document.querySelector('.sacola-container').style.display = 'block';
 
@@ -278,6 +280,7 @@ function inserirNaSacola() {
     }
   } else {
     document.querySelector('.sacola-container').style.display = 'none';
+    document.querySelector('.mensagem-sacola-vazia').style.display = 'grid';
     document.querySelector("aside").classList.remove("mostrar");
   }
 }

@@ -4,9 +4,26 @@
 
 .parceiros-lista {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 40px;
 }
 
 .parceiros-lista img {
   width: 100%;
+}
+
+@media (max-width: 690px) {
+  .parceiros {
+    margin-bottom: 60px;
+  }
+  .parceiros h2 {
+    margin-bottom: 32px;
+  }
+  .parceiros-lista {
+    gap: 20px;
+  }
+  .parceiros-lista img {
+    width: 140px;
+  }
 }

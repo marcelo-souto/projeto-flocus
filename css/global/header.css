@@ -1,0 +1,77 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 40px;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.header a {
+  color: #1b1517;
+  font-size: 1.15rem;
+  padding: 16px 0px;
+  display: block;
+}
+
+.header-menu {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header-menu-user {
+  display: flex;
+  gap: 20px;
+}
+
+.header-menu-user img {
+  width: 24px;
+  height: 24px;
+}
+
+.sacola-icone {
+  position: relative;
+}
+
+.sacola-icone::before {
+  content: attr(data-content);
+  width: 16px;
+  height: 16px;
+  padding: 1px;
+  display: flex;
+  border-radius: 50%;
+  background-color: #4b2e35;
+  color: #fedee6;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  position: absolute;
+  top: 10px;
+  right: -10px;
+}
+
+@media (max-width: 640px) {
+  .header {
+    grid-template-columns: 1fr auto;
+  }
+  .header-menu-user {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  nav {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+  .header-menu {
+    gap: 12px;
+  }
+  .header-menu a {
+    padding: 16px;
+    background-color: #fd82a1;
+    border-radius: 8px;
+  }
+}

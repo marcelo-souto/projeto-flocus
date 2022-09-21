@@ -1,7 +1,7 @@
 .introducao {
   padding-top: 80px;
   display: grid;
-  column-gap: 40px;
+  column-gap: 60px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:'texto texto imagem'
                       'produto produto imagem'
@@ -28,9 +28,8 @@
 }
 
 .imagem-sorvetes-background {
+  margin-top: -60px;
   grid-area: imagem;
-  margin-top: -40px;
-  margin-right: -120px;
 }
 
 .imagem-sorvetes-background img {
@@ -44,7 +43,50 @@
 }
 
 .produto-item {
-  background-size: cover;
+  background-size: auto 100%;
   background-position: center;
   border-radius: 8px;
+  box-shadow: 0px 0px 2px #00000040;
+  transition: background-size .3s;
+}
+
+.produto-item:hover {
+  background-size: auto 116%;
+}
+
+@media (max-width: 960px) {
+  .introducao {
+    padding-top: 0px;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:'texto texto imagem'
+                      'produto produto imagem';
+  }
+  .introducao-texto {
+    align-self: end;
+  }
+  .produtos-area {
+    grid-template-rows: 360px;
+  }
+  .imagem-sorvetes-background {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 840px) {
+  .produtos-area {
+    grid-template-rows: 240px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 690px) {
+  .imagem-sorvetes-background {
+    display: none;
+  }
+  .introducao {
+    padding-top: 20px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0px;
+  }
 }

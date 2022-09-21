@@ -49,3 +49,38 @@ a {
   font-size: 1.5rem;
   line-height: 1.5;
 }
+
+@media (max-width: 960px) {
+  .fonte-display-xxl {
+    font-size: 3.5rem;
+  }
+  .fonte-display-xl {
+    font-size: 3rem;
+  }
+  .fonte-corpo-texto {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .fonte-display-xxl {
+    font-size: 3rem;
+    margin-bottom: 16px;
+  }
+  .fonte-display-xl {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+  .fonte-corpo-texto {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .fonte-display-xxl {
+    font-size: 2.5rem;
+  }
+  .fonte-display-xl {
+    font-size: 2rem;
+  }
+}

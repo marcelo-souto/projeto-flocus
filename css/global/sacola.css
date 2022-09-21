@@ -104,6 +104,26 @@
   align-self: end;
 }
 
+.mensagem-sacola-vazia {
+  max-width: 160px;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 40px;
+  margin-top: -100px;
+}
+
+.mensagem-sacola-vazia img {
+  width: 100%;
+  align-self: end;
+}
+
+.mensagem-sacola-vazia p {
+  text-align: center;
+}
+
 .sacola-container {
   position: relative;
 }
