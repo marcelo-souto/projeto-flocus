@@ -36,8 +36,12 @@
 }
 
 .header-menu-user {
-  display: flex;
+  display: none;
   gap: 8px;
+}
+
+#home .header-menu-user {
+  display: flex;
 }
 
 .header-menu-user a {
