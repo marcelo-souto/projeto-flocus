@@ -26,7 +26,8 @@
   border-radius: 8px 0 0 8px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
+  transition: background .2s ease;
 }
 
 .modal-info {

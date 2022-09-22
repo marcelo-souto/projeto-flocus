@@ -43,15 +43,12 @@
 }
 
 .produto-item {
-  background-size: auto 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   border-radius: 8px;
   box-shadow: 0px 0px 2px #00000040;
   transition: background-size .3s;
-}
-
-.produto-item:hover {
-  background-size: auto 116%;
 }
 
 @media (max-width: 960px) {

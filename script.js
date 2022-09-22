@@ -95,12 +95,14 @@ produtos.map((item, index) => {
     document.querySelectorAll(".modal-info-sabores li").forEach((sabor) => {
       sabor.addEventListener("click", () => {
         if (document.querySelector(".modal-info-sabores li.active")) {
-          document
-            .querySelector(".modal-info-sabores li.active")
-            .classList.remove("active");
-        }
+          document.querySelector(".modal-info-sabores li.active").classList.remove("active");
+          }
 
         sabor.classList.add("active");
+
+          let flavorIndex = document.querySelector('.modal-info-sabores li.active').getAttribute('data-flavor')
+
+          document.querySelector('.modal-display').style.backgroundImage = `url("${item.imagem[Number(flavorIndex) + 4]}")`
 
         document.querySelector(".msg-obrigatorio").style.opacity = 0;
       });
