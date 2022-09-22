@@ -57,9 +57,8 @@
 .produto-item-imagem:after {
   content: 'pedir agora';
   display: block;
-  padding: 6px 10px 6px 28px;
-  background-image: url('../../images/seta.svg');
-  background-color: #F9AABD;
+  padding: 6px 12px;
+  background-color: #fa95ae;
   background-repeat: no-repeat;
   background-position: 8px center;
   background-size: 16px;
@@ -74,7 +73,7 @@
 }
 
 .produto-item-imagem:hover:after {
-  background-color: #fab7c7;
+  background-color: #ffaabe;
 }
 
 @media (max-width: 960px) {
