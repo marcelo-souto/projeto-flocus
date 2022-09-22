@@ -162,6 +162,11 @@
   color: #1b1517;
   border: none;
   cursor: pointer;
+  transition: .3s;
+}
+
+.botao:hover {
+  background-color: #ff95af;
 }
 
 .cancelar {

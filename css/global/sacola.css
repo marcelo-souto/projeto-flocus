@@ -166,11 +166,12 @@
 .limpar-sacola {
   color: #808080;
   position: absolute;
-  right: 0px;
+  right: 30px;
   top: 20px;
   padding: 12px;
   cursor: pointer;
   display: none;
+  font-size: 0.875rem;
 }
 
 @media (max-width: 480px) {

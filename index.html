@@ -1,284 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flocus</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flocus</title>
+    <!-- Fonte Roboto Regular, Sansita SemiBold, Merriweather Bold Italic-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&family=Roboto&family=Sansita+Swashed:wght@600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonte Roboto Regular, Sansita SemiBold, Merriweather Bold Italic-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&family=Roboto&family=Sansita+Swashed:wght@600&display=swap"
-    rel="stylesheet">
+    <!-- Fonte Satoshi Medium, Medium Italic e Bold -->
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,501&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonte Satoshi Medium, Medium Italic e Bold -->
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,501&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-  <link rel="stylesheet" href="./style.css" />
-</head>
+  <body id="home">
+    <div class="modelo">
+      <div class="produto-item">
+        <div class="produto-item-imagem"></div>
+      </div>
 
-<body id="home">
-  <div class="modelo">
-    <div class="produto-item"></div>
-
-    <div class="sacola-item">
-      <div class="sacola-info">
-        <div>
-          <div class="sacola-display"></div>
+      <div class="sacola-item">
+        <div class="sacola-info">
+          <div>
+            <div class="sacola-display"></div>
+          </div>
+          <div>
+            <span class="sacola-nome"></span>
+            <span class="sacola-tamanho"></span>
+            <ul class="sacola-adicionais"></ul>
+          </div>
+          <p class="sacola-excluir">excluir</p>
+          <span class="sacola-valor"></span>
         </div>
-        <div>
-          <span class="sacola-nome"></span>
-          <span class="sacola-tamanho"></span>
-          <ul class="sacola-adicionais"></ul>
-        </div>
-        <p class="sacola-excluir">excluir</p>
-        <span class="sacola-valor"></span>
       </div>
     </div>
 
-  </div>
-
-  <!-- Área da Sacola -->
-  <aside class="sacola-wrapper">
-    <a class="fechar-icone" href="">
-      <img src="./images/icones/icone-fechar.svg" alt="">
-    </a>
-    <p class="limpar-sacola">limpar tudo</p>
-    <div class="mensagem-sacola-vazia">
-      <img src="images/sad-emoji.svg" alt="">
-      <p>Sua sacola está vazia ainda.</p>
-    </div>
-    <div class="sacola-container">
-      <h2>Seu Pedido</h2>
-      <div class="sacola">
-      </div>
-      <div class="total-container">
-        <span class="sacola-subtotal-titulo">subtotal:</span>
-        <span class="sacola-subtotal"></span>
-        <span class="sacola-total-titulo">total:</span>
-        <span class="sacola-total"></span>
-        <button class="botao botao-finalizar">finalizar compra</button>
-      </div>
-    </div>
-  </aside>
-
-  <!-- Área do Modal -->
-  <div class="modal-bg">
-    <div class="modal">
-      <div class="modal-display">
-        <h2 class="modal-display-titulo"></h2>
-      </div>
-      <div class="modal-info">
-        <div>
-          <span class="modal-info-section-titulo">total:</span>
-          <span class="modal-info-price">R$
-            <span></span>
-          </span>
-        </div>
-        <div>
-          <span class="modal-info-section-titulo">escolha um tamanho:</span>
-          <ul class="modal-info-tamanhos"></ul>
-        </div>
-        <div>
-          <span class="modal-info-section-titulo">escolha um sabor:</span>
-          <span class="msg-obrigatorio">obrigatório*</span>
-          <ul class="modal-info-sabores"></ul>
-        </div>
-        <div>
-          <span class="modal-info-section-titulo">adicione por +1R$ cada:</span>
-          <ul class="modal-info-adicionais"></ul>
-        </div>
-        <div>
-          <button class="botao botao-adicionar">adicionar a sacola</button>
-          <p class="cancelar">cancelar</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Site -->
-  <header class="header container">
-    <a href="./index.html">
-      <img src="./images/logo.svg" alt="flocus" />
-    </a>
-    <nav>
-      <ul class="header-menu">
-        <li>
-          <a href="./produtos.html">produtos</a>
-        </li>
-        <li>
-          <a href="./sobrenos.html">sobre nós</a>
-        </li>
-        <li>
-          <a href="./contato.html">contato</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="header-menu-user">
-      <a href="#">
-        <img src="images/icones/icone-usuario.svg" alt="" />
+    <!-- Área da Sacola -->
+    <aside class="sacola-wrapper">
+      <a class="fechar-icone" href="">
+        <img src="./images/icones/icone-fechar.svg" alt="" />
       </a>
-      <a class="sacola-icone" href="#">
-        <img src="images/icones/icone-sacola.svg" alt="" />
+      <p class="limpar-sacola">limpar tudo</p>
+      <div class="mensagem-sacola-vazia">
+        <img src="images/sad-emoji.svg" alt="" />
+        <p>Sua sacola está vazia ainda.</p>
+      </div>
+      <div class="sacola-container">
+        <h2>Seu Pedido</h2>
+        <div class="sacola"></div>
+        <div class="total-container">
+          <span class="sacola-subtotal-titulo">subtotal:</span>
+          <span class="sacola-subtotal"></span>
+          <span class="sacola-total-titulo">total:</span>
+          <span class="sacola-total"></span>
+          <button class="botao botao-finalizar">finalizar compra</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Área do Modal -->
+    <div class="modal-bg">
+      <div class="modal">
+        <div class="modal-display">
+          <h2 class="modal-display-titulo"></h2>
+        </div>
+        <div class="modal-info">
+          <div>
+            <span class="modal-info-section-titulo">total:</span>
+            <span class="modal-info-price"
+              >R$
+              <span></span>
+            </span>
+          </div>
+          <div>
+            <span class="modal-info-section-titulo">escolha um tamanho:</span>
+            <ul class="modal-info-tamanhos"></ul>
+          </div>
+          <div>
+            <span class="modal-info-section-titulo">escolha um sabor:</span>
+            <span class="msg-obrigatorio">obrigatório*</span>
+            <ul class="modal-info-sabores"></ul>
+          </div>
+          <div>
+            <span class="modal-info-section-titulo"
+              >adicione por +1R$ cada:</span
+            >
+            <ul class="modal-info-adicionais"></ul>
+          </div>
+          <div>
+            <button class="botao botao-adicionar">adicionar a sacola</button>
+            <p class="cancelar">cancelar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Site -->
+    <header class="header container">
+      <a href="./index.html">
+        <img src="./images/logo.svg" alt="flocus" />
       </a>
-    </div>
-  </header>
-
-  <main class="introducao container">
-    <div class="introducao-texto">
-      <h1 class="fonte-display-xxl">sinta o sabor e a experiência</h1>
-      <p class="fonte-corpo-texto">
-        no calor, refresque seu dia com o que há de melhor.
-        <span>faça o seu pedido agora:</span>
-      </p>
-    </div>
-
-    <div class="produtos-area">
-    </div>
-
-    <div class="imagem-sorvetes-background">
-      <img src="images/sorvetes-background.svg" alt="" />
-    </div>
-  </main>
-
-  <section class="diferencial container">
-    <h2 class="fonte-display-xl">sinta o sabor e a experiência</h2>
-    <p class="fonte-corpo-texto">
-      garantia de um sabor único com o melhor sorvete caseiro, receita passada por gerações pela família Borges. Estamos no mercado
-      há mais de 40 anos. Conheça nossa história e tradição
-    </p>
-    <div class="diferencial-conteudo">
-      <div class="diferencial-imagem">
-        <img src="./images/imagem-secao-diferencial.jpg" alt="" />
-      </div>
-      <ul class="diferencial-lista">
-        <li>
-          <h3>receita caseira</h3>
-          <p>
-            garantia de um sabor único com o melhor sorvete caseiro, receita passada por gerações.
-          </p>
-        </li>
-        <li>
-          <h3>produtos naturais</h3>
-          <p>
-            garantia de um sabor único com o melhor sorvete caseiro, receita passada por gerações.
-          </p>
-        </li>
-        <li>
-          <h3>garantia de qualidade</h3>
-          <p>
-            garantia de um sabor único com o melhor sorvete caseiro, receita passada por gerações.
-          </p>
-        </li>
-        <li>
-          <h3>receita caseira</h3>
-          <p>
-            garantia de um sabor único com o melhor sorvete caseiro, receita passada por gerações.
-          </p>
-        </li>
-        <li>
-          <h3>receita caseira</h3>
-          <p>
-            garantia de um sabor único com o melhor sorvete caseiro, receita passada por gerações.
-          </p>
-        </li>
-        <li>
-          <h3>receita caseira</h3>
-          <p>
-            garantia de um sabor único com o melhor sorvete caseiro, receita passada por gerações.
-          </p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="parceiros container">
-    <h2 class="fonte-display-xl">parceiros</h2>
-    <ul class="parceiros-lista">
-      <li>
-        <img src="images/logo-parceiros/logo-hortifruti.jpeg" alt="parceiro" />
-      </li>
-      <li>
-        <img src="images/logo-parceiro.svg" alt="parceiro" />
-      </li>
-      <li>
-        <img src="images/logo-parceiro.svg" alt="parceiro" />
-      </li>
-      <li>
-        <img src="images/logo-parceiro.svg" alt="parceiro" />
-      </li>
-      <li>
-        <img src="images/logo-parceiro.svg" alt="parceiro" />
-      </li>
-      <li>
-        <img src="images/logo-parceiro.svg" alt="parceiro" />
-      </li>
-    </ul>
-  </section>
-
-  <section class="depoimentos container">
-    <div class="opiniao-cliente">
-      <img src="./images/imagem-opiniao-cliente-01.jpg" alt="" />
-      <div class="opiniao">
-        <p>
-          Atendimento muito bom, sorvete saboroso e milk shake nota 10.
-          <br />
-          <span>Maria Eduarda</span>
-        </p>
-      </div>
-    </div>
-    <div class="opiniao-cliente">
-      <img src="./images/imagem-opiniao-cliente-02.jpg" alt="" />
-      <div class="opiniao">
-        <p>
-          Atendimento muito bom, sorvete saboroso e milk shake nota 10.
-          <br />
-          <span>Maria Eduarda</span>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer-bg">
-    <div class="footer container">
-      <img src="./images/logo.svg" alt="flocus" />
-      <div class="footer-contato">
-        <h2>contato</h2>
-        <ul>
-          <li>
-            <a href="tel:+5521955554444">21 95555-4444</a>
-          </li>
-          <li>
-            <a href="mailto:contato@flocus.com">contato@flocus.com</a>
-          </li>
-        </ul>
-        <address>
-          <p>Rio de Janeiro - RJ</p>
-          <p>Rua das Árvores, 2345</p>
-        </address>
-        <ul class="footer-redes">
-          <li>
-            <a href="./">
-              <img src="./images/icones/icone-facebook.svg" alt="facebook" />
-            </a>
-          </li>
-          <li>
-            <a href="./">
-              <img src="./images/icones/icone-instagram.svg" alt="instagram" />
-            </a>
-          </li>
-          <li>
-            <a href="./">
-              <img src="./images/icones/icone-youtube.svg" alt="youtube" />
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h2>informações</h2>
-        <ul>
+      <nav>
+        <ul class="header-menu">
           <li>
             <a href="./produtos.html">produtos</a>
           </li>
@@ -289,13 +122,201 @@
             <a href="./contato.html">contato</a>
           </li>
         </ul>
+      </nav>
+      <div class="header-menu-user">
+        <a href="#">
+          <img src="images/icones/icone-usuario.svg" alt="" />
+        </a>
+        <a class="sacola-icone" href="#">
+          <img src="images/icones/icone-sacola.svg" alt="" />
+        </a>
       </div>
-      <p class="footer-copy">alguns direitos reservados. 2022</p>
-    </div>
-  </footer>
+    </header>
 
-  <script src="./produtos/produtos.js"></script>
-  <script src="./script.js"></script>
-</body>
+    <main class="introducao container">
+      <div class="introducao-texto">
+        <h1 class="fonte-display-xxl">sinta o sabor e a experiência</h1>
+        <p class="fonte-corpo-texto">
+          no calor, refresque seu dia com o que há de melhor.
+          <span>faça o seu pedido:</span>
+        </p>
+      </div>
 
+      <div class="produtos-area"></div>
+
+      <div class="imagem-sorvetes-background">
+        <img src="images/sorvetes-background.svg" alt="" />
+      </div>
+    </main>
+
+    <section class="diferencial container">
+      <h2 class="fonte-display-xl">
+        receita caseira com gosto único e especial
+      </h2>
+      <p class="fonte-corpo-texto">
+        garantia de um sabor único com o melhor sorvete caseiro, receita passada
+        por gerações pela família Borges e que agora você pode experimentar.
+        peça agora.
+      </p>
+      <div class="diferencial-conteudo">
+        <div class="diferencial-imagem">
+          <img src="./images/imagem-secao-diferencial.jpg" alt="" />
+        </div>
+        <ul class="diferencial-lista">
+          <li>
+            <h3>receita caseira</h3>
+            <p>
+              garantia de um sabor único com o melhor sorvete caseiro, receita
+              passada por gerações.
+            </p>
+          </li>
+          <li>
+            <h3>produtos naturais</h3>
+            <p>
+              as frutas utilizadas na preparação são cuidadosamente selecionadas
+              e são orgânicas.
+            </p>
+          </li>
+          <li>
+            <h3>garantia de qualidade</h3>
+            <p>
+              leite vegano usado na preparação, valorizamos a produção livre de
+              crueldade animal.
+            </p>
+          </li>
+          <li>
+            <h3>sabores selecionados</h3>
+            <p>
+              combinação de sabores são testados por
+              chefs especialistas nessa área de criação de novos sabores.
+            </p>
+          </li>
+          <li>
+            <h3>estabelecimento</h3>
+            <p>
+              nossas lojas físicas possuem espaço para receber pets. e uma
+              estrutura para receber pessoas de todas as idades.
+            </p>
+          </li>
+          <li>
+            <h3>celebrações</h3>
+            <p>
+              Vem comemorar seu dia especial com a gente! Nosso salão está
+              disponível para eventos comemorativos.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="parceiros container">
+      <h2 class="fonte-display-xl">parceiros</h2>
+      <ul class="parceiros-lista">
+        <li>
+          <img
+            src="images/logo-parceiros/logo-hortifruti.jpeg"
+            alt="parceiro"
+          />
+        </li>
+        <li>
+          <img src="images/logo-parceiro.svg" alt="parceiro" />
+        </li>
+        <li>
+          <img src="images/logo-parceiro.svg" alt="parceiro" />
+        </li>
+        <li>
+          <img src="images/logo-parceiro.svg" alt="parceiro" />
+        </li>
+        <li>
+          <img src="images/logo-parceiro.svg" alt="parceiro" />
+        </li>
+        <li>
+          <img src="images/logo-parceiro.svg" alt="parceiro" />
+        </li>
+      </ul>
+    </section>
+
+    <section class="depoimentos container">
+      <div class="opiniao-cliente">
+        <img src="./images/imagem-opiniao-cliente-01.jpg" alt="" />
+        <div class="opiniao">
+          <p>
+            Atendimento muito bom, sorvete saboroso e milk shake nota 10.
+            <br />
+            <span>Luiza de Souza</span>
+          </p>
+        </div>
+      </div>
+      <div class="opiniao-cliente">
+        <img src="./images/imagem-opiniao-cliente-02.jpg" alt="" />
+        <div class="opiniao">
+          <p>
+            Pedir na Flocus, gosto especial do sorvete de chocolate branco com
+            oreo!! Hum... que delícia!
+            <br />
+            <span>Julia da Silva</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-bg">
+      <div class="footer container">
+        <img src="./images/logo.svg" alt="flocus" />
+        <div class="footer-contato">
+          <h2>contato</h2>
+          <ul>
+            <li>
+              <a href="tel:+5521955554444">21 95555-4444</a>
+            </li>
+            <li>
+              <a href="mailto:contato@flocus.com">contato@flocus.com</a>
+            </li>
+          </ul>
+          <address>
+            <p>Rio de Janeiro - RJ</p>
+            <p>Rua das Árvores, 2345</p>
+          </address>
+          <ul class="footer-redes">
+            <li>
+              <a href="./">
+                <img src="./images/icones/icone-facebook.svg" alt="facebook" />
+              </a>
+            </li>
+            <li>
+              <a href="./">
+                <img
+                  src="./images/icones/icone-instagram.svg"
+                  alt="instagram"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="./">
+                <img src="./images/icones/icone-youtube.svg" alt="youtube" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h2>informações</h2>
+          <ul>
+            <li>
+              <a href="./produtos.html">produtos</a>
+            </li>
+            <li>
+              <a href="./sobrenos.html">sobre nós</a>
+            </li>
+            <li>
+              <a href="./contato.html">contato</a>
+            </li>
+          </ul>
+        </div>
+        <p class="footer-copy">alguns direitos reservados. 2022</p>
+      </div>
+    </footer>
+
+    <script src="./produtos/produtos.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>

@@ -15,12 +15,12 @@ produtos.map((item, index) => {
   produtoItem.setAttribute("data-key", index);
 
   // Inserindo as informacoes de imagem e nome de cada produto na tela
-  produtoItem.style.backgroundImage = `url('${item.imagem[0]}')`; // imagem
+  produtoItem.querySelector('.produto-item-imagem').style.backgroundImage = `url('${item.imagem[0]}')`; // imagem
 
   // Adicionando um evento de clique em cada produto, agora disposto na tela
-  produtoItem.addEventListener("click", (e) => {
+  produtoItem.querySelector('.produto-item-imagem').addEventListener("click", (e) => {
     // Pegando o atribtuto do produto clicado para utiliza-lo como index quando percorrer array
-    let key = e.target.getAttribute("data-key");
+    let key = e.target.closest('.produto-item').getAttribute("data-key");
 
     modalKey = key;
 
