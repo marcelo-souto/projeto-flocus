@@ -14,6 +14,10 @@
   display: block;
 }
 
+.header > a {
+  width: max-content;
+}
+
 .header-menu {
   display: flex;
   gap: 40px;
