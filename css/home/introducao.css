@@ -74,7 +74,7 @@
 }
 
 .produto-item-imagem:hover:after {
-  background-color: #ffffff;
+  background-color: #fab7c7;
 }
 
 @media (max-width: 960px) {
