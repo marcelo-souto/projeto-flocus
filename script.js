@@ -1,13 +1,17 @@
-let modal = document.querySelector(".modal-bg"); // Modal
+const modal = document.querySelector(".modal-bg"); // Modal
 let cart = [];
 let modalKey;
 
-inserirNaSacola()
+inserirNaSacola();
+
+function preCarregamento() {
+
+}
 
 // Passando pelos itens da array Produtos
 produtos.map((item, index) => {
   // Clonando a div modelo do produto e declarando ela como uma variavel
-  let produtoItem = document
+  const produtoItem = document
     .querySelector(".modelo .produto-item")
     .cloneNode(true);
 
@@ -15,111 +19,129 @@ produtos.map((item, index) => {
   produtoItem.setAttribute("data-key", index);
 
   // Inserindo as informacoes de imagem e nome de cada produto na tela
-  produtoItem.querySelector('.produto-item-imagem').style.backgroundImage = `url('${item.imagem[0]}')`; // imagem
+  produtoItem.querySelector(
+    ".produto-item-imagem"
+  ).style.backgroundImage = `url('${item.imagem[0]}')`; // imagem
 
   // Adicionando um evento de clique em cada produto, agora disposto na tela
-  produtoItem.querySelector('.produto-item-imagem').addEventListener("click", (e) => {
-    // Pegando o atribtuto do produto clicado para utiliza-lo como index quando percorrer array
-    let key = e.target.closest('.produto-item').getAttribute("data-key");
+  produtoItem
+    .querySelector(".produto-item-imagem")
+    .addEventListener("click", (e) => {
+      // Pegando o atribtuto do produto clicado para utiliza-lo como index quando percorrer array
+      const key = e.target.closest(".produto-item").getAttribute("data-key");
 
-    modalKey = key;
+      modalKey = key;
 
-    document.querySelector(".msg-obrigatorio").style.opacity = 0;
-    // Adiconando imagem do produto na parte de imagem principal do modal
-    document.querySelector(
-      ".modal-display"
-    ).style.backgroundImage = `url('${produtos[key].imagem[0]}')`;
+      document.querySelector(".msg-obrigatorio").style.opacity = 0;
+      // Adiconando imagem do produto na parte de imagem principal do modal
+      document.querySelector(
+        ".modal-display"
+      ).style.backgroundImage = `url('${produtos[key].imagem[0]}')`;
 
-    // Variavel de apoio que sera utilizada para inserir os itens de cada lista
-    let itemDaLista = "";
+      // Variavel de apoio que sera utilizada para inserir os itens de cada lista
+      let itemDaLista = "";
 
-    // Inserindo os tamanhos do produto
-    produtos[key].tamanho.forEach((tamanho, tamanhoIndex) => {
-      // Inserindo os tamanhos do produto e dando a cada um deles um atributo de tamanho que sera utilizado como index
-      document.querySelector(".modal-info-tamanhos").innerHTML =
-        itemDaLista += `<li data-size="${tamanhoIndex}">${tamanho}</li>`;
-    });
+      // Inserindo os tamanhos do produto
+      produtos[key].tamanho.forEach((tamanho, tamanhoIndex) => {
+        // Inserindo os tamanhos do produto e dando a cada um deles um atributo de tamanho que sera utilizado como index
+        document.querySelector(".modal-info-tamanhos").innerHTML =
+          itemDaLista += `<li data-size="${tamanhoIndex}">${tamanho}</li>`;
+      });
 
-    // Resetando a variavel de apoio para reutilizá-la
-    itemDaLista = "";
+      // Resetando a variavel de apoio para reutilizá-la
+      itemDaLista = "";
 
-    // Inserindo os sabores do produto
-    produtos[key].sabor.forEach((sabor, saborIndex) => {
-      // Inserindo as imagens de referentes a cada sabor e dando a cada uma delas um atributo de sabor que sera utilizado como index
-      document.querySelector(".modal-info-sabores").innerHTML =
-        itemDaLista += `<li style="background-image: url('${item.imagem[saborIndex + 1] }')" data-flavor="${saborIndex}"></li>`;
-    });
+      // Inserindo os sabores do produto
+      produtos[key].sabor.forEach((sabor, saborIndex) => {
+        // Inserindo as imagens de referentes a cada sabor e dando a cada uma delas um atributo de sabor que sera utilizado como index
+        document.querySelector(".modal-info-sabores").innerHTML =
+          itemDaLista += `<li style="background-image: url('${
+            item.imagem[saborIndex + 1]
+          }')" data-flavor="${saborIndex}"></li>`;
+      });
 
-    // Resetando
-    itemDaLista = "";
+      // Resetando
+      itemDaLista = "";
 
-    // Inserindo os adicionais
-    produtos[key].adicional.forEach((adicional, adicionalIndex) => {
-      // inserindo os adiconais e dando um atributo a cada um deles
-      document.querySelector(".modal-info-adicionais").innerHTML =
-        itemDaLista += `<li data-add="${adicionalIndex}">${adicional}</li>`;
-    });
+      // Inserindo os adicionais
+      produtos[key].adicional.forEach((adicional, adicionalIndex) => {
+        // inserindo os adiconais e dando um atributo a cada um deles
+        document.querySelector(".modal-info-adicionais").innerHTML =
+          itemDaLista += `<li data-add="${adicionalIndex}">${adicional}</li>`;
+      });
 
-    // Colocando o tamanho de 500ml como padrão
-    document
-      .querySelectorAll(".modal-info-tamanhos li")[1]
-      .classList.add("active");
-
-    // Colocando o valor total do produto no modal referente ao tamanho padrão
-    document.querySelector(".modal-info-price span").innerHTML = `${produtos[
-      index
-    ].preco[
+      // Colocando o tamanho de 500ml como padrão
       document
-        .querySelector(".modal-info-tamanhos li.active")
-        .getAttribute("data-size")
-    ].toFixed(2)}`;
+        .querySelectorAll(".modal-info-tamanhos li")[1]
+        .classList.add("active");
 
-    document.querySelectorAll(".modal-info-tamanhos li").forEach((tamanho) => {
-      tamanho.addEventListener("click", (e) => {
-        let tamanhoKey = e.target.getAttribute("data-size");
-
-        document.querySelector(
-          ".modal-info-price span"
-        ).innerHTML = `${produtos[index].preco[tamanhoKey].toFixed(2)}`;
-
+      // Colocando o valor total do produto no modal referente ao tamanho padrão
+      document.querySelector(".modal-info-price span").innerHTML = `${produtos[
+        index
+      ].preco[
         document
           .querySelector(".modal-info-tamanhos li.active")
-          .classList.remove("active");
+          .getAttribute("data-size")
+      ].toFixed(2)}`;
 
-        tamanho.classList.add("active");
+      document
+        .querySelectorAll(".modal-info-tamanhos li")
+        .forEach((tamanho) => {
+          tamanho.addEventListener("click", (e) => {
+            const tamanhoKey = e.target.getAttribute("data-size");
 
-        atualizarTotalModal(index); // Preco do modal atualizado
-      });
-    });
+            document.querySelector(
+              ".modal-info-price span"
+            ).innerHTML = `${produtos[index].preco[tamanhoKey].toFixed(2)}`;
 
-    document.querySelectorAll(".modal-info-sabores li").forEach((sabor) => {
-      sabor.addEventListener("click", () => {
-        if (document.querySelector(".modal-info-sabores li.active")) {
-          document.querySelector(".modal-info-sabores li.active").classList.remove("active");
+            document
+              .querySelector(".modal-info-tamanhos li.active")
+              .classList.remove("active");
+
+            tamanho.classList.add("active");
+
+            atualizarTotalModal(index); // Preco do modal atualizado
+          });
+        });
+
+      document.querySelectorAll(".modal-info-sabores li").forEach((sabor) => {
+        sabor.addEventListener("click", () => {
+          if (document.querySelector(".modal-info-sabores li.active")) {
+            document
+              .querySelector(".modal-info-sabores li.active")
+              .classList.remove("active");
           }
 
-        sabor.classList.add("active");
+          sabor.classList.add("active");
 
-          let flavorIndex = document.querySelector('.modal-info-sabores li.active').getAttribute('data-flavor')
+          const flavorIndex = document
+            .querySelector(".modal-info-sabores li.active")
+            .getAttribute("data-flavor");
 
-          document.querySelector('.modal-display').style.backgroundImage = `url("${item.imagem[Number(flavorIndex) + 4]}")`
+          document.querySelector(
+            ".modal-display"
+          ).style.backgroundImage = `url("${
+            item.imagem[Number(flavorIndex) + 4]
+          }")`;
 
-        document.querySelector(".msg-obrigatorio").style.opacity = 0;
-      });
-    });
-
-    document
-      .querySelectorAll(".modal-info-adicionais li")
-      .forEach((adicional) => {
-        adicional.addEventListener("click", () => {
-          adicional.classList.toggle("active");
-
-          atualizarTotalModal(index); // Preco do modal atualizado
+          document.querySelector(".msg-obrigatorio").style.opacity = 0;
         });
       });
 
-    abrirModal(modal);
-  });
+      document
+        .querySelectorAll(".modal-info-adicionais li")
+        .forEach((adicional) => {
+          adicional.addEventListener("click", () => {
+            adicional.classList.toggle("active");
+
+            atualizarTotalModal(index); // Preco do modal atualizado
+          });
+        });
+
+        
+
+      abrirModal(modal);
+    });
 
   document.querySelector(".produtos-area").append(produtoItem);
 });
@@ -144,15 +166,15 @@ function fecharModal() {
 document.querySelector(".cancelar").addEventListener("click", fecharModal);
 
 function atualizarTotalModal(indexDoProduto) {
-  let precoTamanhoSelecionado = document
+  const precoTamanhoSelecionado = document
     .querySelector(".modal-info-tamanhos li.active")
     .getAttribute("data-size");
 
   let preco = produtos[indexDoProduto].preco[precoTamanhoSelecionado];
 
-  let precoModal = document.querySelector(".modal-info-price span");
+  const precoModal = document.querySelector(".modal-info-price span");
 
-  let adicionais = document.querySelectorAll(
+  const adicionais = document.querySelectorAll(
     ".modal-info-adicionais li.active"
   );
 
@@ -163,7 +185,7 @@ function atualizarTotalModal(indexDoProduto) {
 
 function pegarEscolhasCliente() {
   // Pegando o atributo data do tamanho do produto escolhido
-  let escolhaTamanho = modal
+  const escolhaTamanho = modal
     .querySelector(".modal-info-tamanhos li.active")
     .getAttribute("data-size");
 
@@ -171,7 +193,7 @@ function pegarEscolhasCliente() {
   let escolhaSabor = modal.querySelector(".modal-info-sabores li.active");
 
   // escolhas adicionais
-  let escolhaAdicionais = [];
+  const escolhaAdicionais = [];
   modal
     .querySelectorAll(".modal-info-adicionais li.active")
     .forEach((itemMarcado) => {
@@ -200,36 +222,34 @@ document
   .querySelector(".botao-adicionar")
   .addEventListener("click", pegarEscolhasCliente);
 
-
-document.querySelector('.limpar-sacola').addEventListener('click', () => {
+document.querySelector(".limpar-sacola").addEventListener("click", () => {
   cart = [];
-  inserirNaSacola()
-})
+  inserirNaSacola();
+});
 
-document.querySelector('.sacola-icone').addEventListener('click', (e) => {
-  e.preventDefault()
+document.querySelector(".sacola-icone").addEventListener("click", (e) => {
+  e.preventDefault();
 
-  document.querySelector('.sacola-wrapper').classList.add('mostrar')
-})
+  document.querySelector(".sacola-wrapper").classList.add("mostrar");
+});
 
-document.querySelector('.fechar-icone').addEventListener('click', (e) => {
-  e.preventDefault()
+document.querySelector(".fechar-icone").addEventListener("click", (e) => {
+  e.preventDefault();
 
-  document.querySelector('.sacola-wrapper').classList.remove('mostrar')
-})
+  document.querySelector(".sacola-wrapper").classList.remove("mostrar");
+});
 
 function inserirNaSacola() {
   document.querySelector(".sacola").innerHTML = "";
 
-  document.querySelector('.sacola-icone').dataset.content = `${cart.length}`
+  document.querySelector(".sacola-icone").dataset.content = `${cart.length}`;
 
   if (cart.length > 0) {
+    document.querySelector(".limpar-sacola").style.display = "block";
 
-    document.querySelector('.limpar-sacola').style.display = 'block'
+    document.querySelector(".mensagem-sacola-vazia").style.display = "none";
 
-    document.querySelector('.mensagem-sacola-vazia').style.display = 'none';
-    
-    document.querySelector('.sacola-container').style.display = 'block';
+    document.querySelector(".sacola-container").style.display = "block";
 
     let tamanhoDaTela = document.body.clientWidth;
     if (tamanhoDaTela > 560) {
@@ -239,19 +259,18 @@ function inserirNaSacola() {
     let subtotal = 0;
     let total = 0;
 
-    for (let i in cart) {
-      let produtoItem = produtos.find((item) => item.id == cart[i].id);
+    for (const i in cart) {
+      const produtoItem = produtos.find((item) => item.id == cart[i].id);
 
-      let sacolaItem = document
+      const sacolaItem = document
         .querySelector(".modelo .sacola-item")
         .cloneNode(true);
 
-      let valorItem = produtoItem.preco[parseInt(cart[i].tamanho)] +
-      cart[i].adicionais.length;
+      const valorItem =
+        produtoItem.preco[parseInt(cart[i].tamanho)] +
+        cart[i].adicionais.length;
 
-      subtotal += valorItem
-        
-      
+      subtotal += valorItem;
 
       sacolaItem.querySelector(
         ".sacola-display"
@@ -263,7 +282,7 @@ function inserirNaSacola() {
         produtoItem.nome
       } de ${produtoItem.sabor[cart[i].sabor]}`;
 
-      let sacolaTamanho = sacolaItem.querySelector(".sacola-tamanho");
+      const sacolaTamanho = sacolaItem.querySelector(".sacola-tamanho");
       sacolaTamanho.innerHTML = produtoItem.tamanho[cart[i].tamanho];
 
       let itemDaLista = "";
@@ -272,7 +291,9 @@ function inserirNaSacola() {
           itemDaLista += `<li>${produtoItem.adicional[adicional]}</li>`;
       });
 
-      sacolaItem.querySelector('.sacola-valor').innerHTML = `R$ ${valorItem.toFixed(2)}`
+      sacolaItem.querySelector(
+        ".sacola-valor"
+      ).innerHTML = `R$ ${valorItem.toFixed(2)}`;
 
       sacolaItem
         .querySelector(".sacola-excluir")
@@ -284,16 +305,19 @@ function inserirNaSacola() {
 
       total = subtotal;
 
-      document.querySelector(".sacola-subtotal").innerHTML =
-        `R$ ${subtotal.toFixed(2)}`;
-      document.querySelector(".sacola-total").innerHTML = `R$ ${total.toFixed(2)}`;
+      document.querySelector(
+        ".sacola-subtotal"
+      ).innerHTML = `R$ ${subtotal.toFixed(2)}`;
+      document.querySelector(".sacola-total").innerHTML = `R$ ${total.toFixed(
+        2
+      )}`;
 
       document.querySelector(".sacola").append(sacolaItem);
     }
   } else {
-    document.querySelector('.limpar-sacola').style.display = 'none'
-    document.querySelector('.sacola-container').style.display = 'none';
-    document.querySelector('.mensagem-sacola-vazia').style.display = 'grid';
+    document.querySelector(".limpar-sacola").style.display = "none";
+    document.querySelector(".sacola-container").style.display = "none";
+    document.querySelector(".mensagem-sacola-vazia").style.display = "grid";
     document.querySelector("aside").classList.remove("mostrar");
   }
 }

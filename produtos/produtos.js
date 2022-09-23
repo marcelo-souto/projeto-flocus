@@ -6,7 +6,7 @@ let produtos = [
     tamanho: ['300ml','500ml','700ml'],
     preco: [9.90, 12.90, 14.90],
     sabor: ['chocolate','morango','baunilha'],
-    adicional: ['ovomaltine','crocante','calda em dobro']
+    adicional: ['ovomaltine','crocante','calda em dobro','cookie']
   },
   {
     id: 2,
@@ -15,6 +15,6 @@ let produtos = [
     tamanho: ['300ml','500ml','700ml'],
     preco: [7.90, 9.90, 12.90],
     sabor: ['chocolate','morango','baunilha'],
-    adicional: ['ovomaltine','crocante','calda em dobro','biscoito']
+    adicional: ['ovomaltine','crocante','calda em dobro','biscoito','confetti','bombom']
   }
 ]

@@ -161,6 +161,7 @@
   margin-top: 20px;
   grid-column: 2;
   place-self: end;
+  grid-column: 1 / -1;
 }
 
 .limpar-sacola {
