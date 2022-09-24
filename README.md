@@ -1,7 +1,7 @@
 
 # Projeto Flocus
 
-Olá. quero apresentar a vocês o projeto Flocus, um website desenvolvido em equipe, com o objetivo de ajudar um empresário local a iniciar sua presença digital com um e-commerce interativo, onde o usuário pode costumizar seu pedido.
+Olá, quero apresentar a vocês o projeto Flocus, um website desenvolvido em equipe, com o objetivo de ajudar um empresário local a iniciar sua presença digital com um e-commerce interativo, onde o usuário pode costumizar seu pedido.
 
 ![projeto-flocus](https://user-images.githubusercontent.com/100978478/192068550-9be58c18-5b85-425b-ad55-c41836a72d74.jpg)
 
