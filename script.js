@@ -244,10 +244,10 @@ function pegarEscolhasCliente() {
 
     // Fecha o modal
     fecharModal();
-  }
 
-  // Atualiza o carrinho
-  inserirNaSacola();
+     // Atualiza o carrinho
+    inserirNaSacola();
+  }
 }
 
 
